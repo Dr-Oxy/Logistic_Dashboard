@@ -2,9 +2,9 @@ import React from 'react';
 
 const Sidebar = () => {
   return (
-    <aside className="sidebar bg-white w-66 h-full fixed top-0 left-0  pt-10  overflow-y-scroll flex flex-col">
+    <aside className="sidebar bg-white w-66 h-full fixed top-0 left-0  pt-10  overflow-y-auto flex flex-col">
       <div className="sidebar__logo uppercase font-bold text-2xl text-black px-8 mb-12">
-        ipi
+        ipi.
       </div>
 
       <div className="sidebar__main-content px-6 mb-16">
