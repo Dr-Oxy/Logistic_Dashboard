@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* sidebar */
+
+.icon {
+  height: 3px;
+  width: 10px;
+  background-color: rgba(1, 27, 87, 0.75);
+  padding: 3px 10px;
+}
+
+.sidebar__ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.sidebar__ul li a {
+  color: rgb(1, 27, 87, 0.75);
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 24px;
+  transition: color 0.3s ease-in-out;
+}
+
+.sidebar__ul a:hover,
+.sidebar__ul a.active {
+  color: #fff;
+  background-color: rgba(56, 108, 226);
+}
+
+.sidebar__ul a:hover .icon,
+.sidebar__ul a.active .icon {
+  background-color: white;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f3f3f4;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(214, 225, 248);
+  border-radius: 100vw;
+}
