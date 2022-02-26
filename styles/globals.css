@@ -12,6 +12,9 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-color: green;
+}
 /* sidebar */
 
 .icon {
@@ -46,6 +49,11 @@ html {
   background-color: white;
 }
 
+@media screen and (max-width: 1023px) {
+  .sidebar {
+    display: none;
+  }
+}
 /* scrollbar */
 
 ::-webkit-scrollbar {
