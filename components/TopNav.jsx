@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
+import { IoIosNotificationsOutline } from 'react-icons/io';
 
 const TopNav = () => {
   return (
@@ -21,11 +23,13 @@ const TopNav = () => {
       </div>
 
       <div className=" ml-auto flex items-center">
-        <div className="w-16 h-16 bg-gray-300 rounded-full"></div>
+        <div className="w-14 h-14 bg-gray-200 rounded-full flex justify-center items-center">
+          <IoIosNotificationsOutline className="text-3xl" />
+        </div>
 
-        <div className="line w-1 h-16 bg-gray-300 mx-4"></div>
+        <div className="line w-1 h-14 bg-gray-300 mx-4"></div>
 
-        <div className="bg-gray-300 h-16 w-16 rounded-full"></div>
+        <div className="bg-avatar bg-cover bg-no-repeat bg-center h-14 w-14 rounded-full "></div>
       </div>
     </div>
   );

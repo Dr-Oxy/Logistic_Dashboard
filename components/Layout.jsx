@@ -12,7 +12,7 @@ export const Layout = ({ children }) => {
 
       <Sidebar />
 
-      <main className=" bg-gray-200 text-gray-500 pl-8 pr-20 py-8 min-h-screen lg:ml-72">
+      <main className=" bg-gray-100 text-gray-500 pl-8 pr-14 md:pr-20 py-8 min-h-screen lg:ml-72">
         {children}
       </main>
     </div>

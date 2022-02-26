@@ -15,8 +15,12 @@ const Card = ({ small, heading, joined, bg, icon, hover }) => {
       </div>
 
       <div
-        className={`${style.semi} ${bg} h-20 w-24  absolute bottom-0 right-0`}
-      ></div>
+        className={`${style.semi} ${bg} h-16 w-16  absolute bottom-0 right-0 text-2xl text-white`}
+      >
+        <div className="flex items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 ">
+          {icon}
+        </div>
+      </div>
     </div>
   );
 };

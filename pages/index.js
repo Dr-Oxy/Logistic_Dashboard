@@ -1,5 +1,8 @@
 import TopNav from '../components/TopNav';
 import Card from '../components/Card';
+import { GoPerson } from 'react-icons/go';
+import { MdPeople } from 'react-icons/md';
+import { ImStatsBars } from 'react-icons/im';
 
 import home from '../styles/Home.module.css';
 
@@ -8,15 +11,17 @@ export default function Home() {
     <section className="home">
       <TopNav />
 
-      <div className="mt-8 mb-8">
-        <h1 className="text-3xl text-black font-bold">Good Evening, Michael</h1>
+      <div className="mt-10 mb-8 ">
+        <h1 className="text-2xl md:text-3xl text-black font-bold">
+          Good Evening, Chioma.
+        </h1>
         <p className="text-gray-500 mt-3">
           Glad to have you back, heres an overview of your operation today
         </p>
       </div>
 
       <div className={home.card__grid}>
-        <Card bg="bg-blue-700" hover="hover:bg-blue-700" />
+        <Card bg="bg-blue-700" hover="hover:bg-blue-700" icon={<GoPerson />} />
 
         <Card
           small="registered transporters"
@@ -24,6 +29,7 @@ export default function Home() {
           joined="3467 onboard today"
           bg="bg-green-300"
           hover="hover:bg-green-300"
+          icon={<MdPeople />}
         />
 
         <Card
@@ -32,6 +38,7 @@ export default function Home() {
           joined="3467 shipped today"
           bg="bg-pink-500"
           hover="hover:bg-pink-500"
+          icon={<ImStatsBars />}
         />
       </div>
 
@@ -55,26 +62,32 @@ export default function Home() {
 
         <div id="1m" className="bg-white h-96 mt-6 rounded-md">
           <div
-            className={`${home.chart__heading} flex justify-between items-center p-10`}
+            className={`${home.chart__heading} md:flex justify-between items-center p-5 md:p-10`}
           >
-            <div className="flex items-center">
-              <div className="mr-32">
-                <p className="font-bold uppercase text-sm mb-1">shipment</p>
-                <h2 className="font-bold text-black text-2xl">60,000</h2>
+            <div className="flex items-center mb-6 md:mb-0">
+              <div className="mr-10 md:mr-32">
+                <p className="font-bold uppercase text-xs md:text-sm mb-1">
+                  shipment
+                </p>
+                <h2 className="font-bold text-black text-lg md:text-2xl">
+                  60,000
+                </h2>
               </div>
 
               <div>
-                <p className="font-bold uppercase text-sm mb-1">
+                <p className="font-bold uppercase text-xs md:text-sm mb-1">
                   active vehicles
                 </p>
-                <h2 className="font-bold text-black text-2xl">237,889</h2>
+                <h2 className="font-bold text-black text-lg md:text-2xl">
+                  237,889
+                </h2>
               </div>
             </div>
 
             <div
               className={`${home.color__tag} flex items-center text-base capitalize`}
             >
-              <p className="flex items-center before:content-[''] before:block before:bg-green-500 before:h-2 before:w-8 before:mr-4 mr-10">
+              <p className="flex items-center before:content-[''] before:block before:bg-green-500 before:h-2 before:w-8 before:mr-4 mr-4 md:mr-10">
                 shipments
               </p>
 
