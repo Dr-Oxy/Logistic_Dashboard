@@ -1,8 +1,9 @@
 import TopNav from '../components/TopNav';
 import Card from '../components/Card';
 import { GoPerson } from 'react-icons/go';
-import { MdPeople } from 'react-icons/md';
+import { MdPeople, MdWbSunny } from 'react-icons/md';
 import { ImStatsBars } from 'react-icons/im';
+import { BsMoonStarsFill } from 'react-icons/bs';
 
 import home from '../styles/Home.module.css';
 
@@ -42,7 +43,7 @@ export default function Home() {
         />
       </div>
 
-      <div className={`${home.bottom} my-10 text-gray-500`}>
+      <div className={`${home.bottom} my-10 text-gray-500 relative`}>
         <div className=" md:flex justify-between items-center">
           <div>
             <h5 className="text-black font-bold text-base mb-3">Shipments</h5>
@@ -98,6 +99,18 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* 
+      <div
+        className={`${home.theme__toggle} bg-white flex flex-col items-center w-fit px-3 py-4 shadow-sm`}
+      >
+        <button>
+          <BsMoonStarsFill className=" text-3xl fill-yellow-400" />
+        </button>
+
+        <button className={`${home.theme__active} mt-6 p-4 rounded-lg`}>
+          <MdWbSunny className="text-3xl fill-yellow-400" />
+        </button>
+      </div> */}
     </section>
   );
 }

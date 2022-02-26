@@ -1,5 +1,6 @@
 import Sidebar from '../components/Sidebar';
 import Head from 'next/head';
+import Theme from './Theme';
 
 export const Layout = ({ children }) => {
   return (
@@ -12,9 +13,10 @@ export const Layout = ({ children }) => {
 
       <Sidebar />
 
-      <main className=" bg-gray-100 text-gray-500 pl-8 pr-14 md:pr-20 py-8 min-h-screen lg:ml-72">
+      <main className=" bg-gray-100 text-gray-500 pl-8 pr-14 md:pr-20 py-8 min-h-screen lg:ml-72 relative">
         {children}
       </main>
+      <Theme />
     </div>
   );
 };

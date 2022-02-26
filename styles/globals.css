@@ -57,3 +57,7 @@ html {
   background-color: rgb(214, 225, 248);
   border-radius: 100vw;
 }
+
+.theme__active {
+  background-color: rgb(243, 243, 243);
+}
