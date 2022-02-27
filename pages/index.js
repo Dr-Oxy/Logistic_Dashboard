@@ -1,11 +1,16 @@
+//components
 import TopNav from '../components/TopNav';
 import Card from '../components/Card';
+import LineChart from '../components/chart/Line';
+
+//icons
 import { GoPerson } from 'react-icons/go';
 import { MdPeople, MdWbSunny } from 'react-icons/md';
 import { ImStatsBars } from 'react-icons/im';
-import { BsMoonStarsFill } from 'react-icons/bs';
 
+//style
 import home from '../styles/Home.module.css';
+import { Line } from 'react-chartjs-2';
 
 export default function Home() {
   return (
@@ -61,9 +66,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="1m" className="bg-white h-96 mt-6 rounded-md">
+        <div id="1m" className="bg-white h-auto mt-6 rounded-md">
           <div
-            className={`${home.chart__heading} md:flex justify-between items-center p-5 md:p-10`}
+            className={`${home.chart__heading} md:flex justify-between items-center p-5 md:px-10 md:py-5`}
           >
             <div className="flex items-center mb-6 md:mb-0">
               <div className="mr-10 md:mr-32">
@@ -97,20 +102,10 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          <LineChart />
         </div>
       </div>
-      {/* 
-      <div
-        className={`${home.theme__toggle} bg-white flex flex-col items-center w-fit px-3 py-4 shadow-sm`}
-      >
-        <button>
-          <BsMoonStarsFill className=" text-3xl fill-yellow-400" />
-        </button>
-
-        <button className={`${home.theme__active} mt-6 p-4 rounded-lg`}>
-          <MdWbSunny className="text-3xl fill-yellow-400" />
-        </button>
-      </div> */}
     </section>
   );
 }
