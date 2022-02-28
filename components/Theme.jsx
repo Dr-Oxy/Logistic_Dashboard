@@ -4,7 +4,7 @@ import { BsMoonStarsFill } from 'react-icons/bs';
 
 const Theme = () => {
   return (
-    <div className="bg-white flex flex-col items-center w-fit px-2 py-4 shadow-sm rounded-2xl absolute bottom-40 right-0">
+    <div className="bg-white flex flex-col items-center w-fit px-2 py-4 shadow-sm rounded-2xl fixed bottom-40 right-0">
       <button>
         <BsMoonStarsFill className=" text-2xl fill-yellow-400" />
       </button>
