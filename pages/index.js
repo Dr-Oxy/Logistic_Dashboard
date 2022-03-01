@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 //components
-import TopNav from '../components/TopNav';
+
 import Card from '../components/Card';
 import Analytics from '../components/Analytics';
 
@@ -19,20 +19,20 @@ import { monthData } from '../Utils/monthData';
 import { yearData } from '../Utils/yearData';
 
 export default function Home() {
+  //Toggle the tab view
   const [toggleState, setToggleState] = useState(1);
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
 
+  //change chart variables
   const [month] = useState(monthData);
 
   const [year] = useState(yearData);
 
   return (
     <section className="home">
-      <TopNav />
-
       <div className="mt-10 mb-8 ">
         <h1 className="text-2xl md:text-3xl text-black font-bold">
           Good Evening, Chioma.

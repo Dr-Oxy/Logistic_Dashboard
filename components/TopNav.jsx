@@ -5,7 +5,7 @@ import { IoIosNotificationsOutline } from 'react-icons/io';
 const TopNav = () => {
   return (
     <div className="vertical__nav flex items-center">
-      <div className={`home.mobile__sidebar__open lg:hidden`}>
+      <div className="lg:hidden">
         <svg
           width="31"
           height="24"
@@ -23,7 +23,7 @@ const TopNav = () => {
       </div>
 
       <div className=" ml-auto flex items-center">
-        <div className="w-14 h-14 bg-gray-200 rounded-full flex justify-center items-center">
+        <div className="w-14 h-14 bg-gray-100 rounded-full flex justify-center items-center">
           <IoIosNotificationsOutline className="text-3xl" />
         </div>
 

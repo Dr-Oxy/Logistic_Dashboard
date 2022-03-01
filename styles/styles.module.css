@@ -1,0 +1,23 @@
+.table__wrap {
+  background-color: rgba(246, 248, 251, 1);
+}
+
+.table__tab {
+  padding: 20px 30px;
+  color: rgba(155, 163, 160, 1);
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+}
+
+.table__tab__active {
+  color: rgba(56, 108, 226, 1);
+  border-bottom: 5px solid rgba(56, 108, 226, 1);
+}
+
+.tableTab__content {
+  display: none;
+}
+
+.tableTab__content__active {
+  display: block;
+}
