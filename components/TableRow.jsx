@@ -4,7 +4,7 @@ import { MdMoreVert } from 'react-icons/md';
 
 const TableRow = () => {
   return (
-    <tr className="bg-white">
+    <tr className={`${styles.table__row} bg-white`}>
       <td>
         <div className="flex  items-start ">
           <ImTruck className="text-3xl text-black" />
