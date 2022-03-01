@@ -20,6 +20,7 @@ html {
 }
 
 .sidebar__ul li a {
+  color: rgb(1, 27, 87, 0.75);
   display: inline-block;
   width: 100%;
   padding: 15px 20px;
