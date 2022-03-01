@@ -1,10 +1,13 @@
-import React from 'react';
+//import icons
 import { GoHome, GoPerson, GoCreditCard } from 'react-icons/go';
 import { ImTruck, ImStatsBars } from 'react-icons/im';
 import { MdPeople, MdSupport } from 'react-icons/md';
 import { RiSailboatFill, RiBarChart2Fill } from 'react-icons/ri';
 import { IoIosSettings } from 'react-icons/io';
 import { FaReceipt } from 'react-icons/fa';
+
+import Link from 'next/link';
+import ActiveLink from './ActiveLink';
 
 const Sidebar = () => {
   return (
@@ -19,44 +22,47 @@ const Sidebar = () => {
         <nav>
           <ul className="sidebar__ul">
             <li>
-              <a className="active flex" href="#home">
+              <ActiveLink href="/">
                 <span className="flex items-center">
                   <GoHome className="text-3xl mr-4" />
                   <span>Home</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
             <li>
-              <a href="#vehicles">
+              <ActiveLink href="/vehicles">
                 <span className="flex items-center">
                   <ImTruck className="text-3xl mr-4" />
                   <span>Vehicles</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
+
             <li>
-              <a href="#transporters">
+              <ActiveLink href="/transporters">
                 <span className="flex items-center">
                   <MdPeople className="text-3xl mr-4" />
                   <span>Transporters</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
+
             <li>
-              <a href="#customers">
+              <ActiveLink href="/customers">
                 <span className="flex items-center">
                   <GoPerson className="text-3xl mr-4" />
                   <span>Customers</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
+
             <li>
-              <a href="#shippers">
+              <ActiveLink href="/shippers">
                 <span className="flex items-center">
                   <RiSailboatFill className="text-3xl mr-4" />
                   <span>Shippers</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
           </ul>
         </nav>
@@ -70,44 +76,48 @@ const Sidebar = () => {
         <nav>
           <ul className="sidebar__ul">
             <li>
-              <a href="#tickets">
+              <ActiveLink href="/tickets">
                 <span className="flex items-center">
                   <MdSupport className="mr-4 text-3xl" />
                   <span>Support Tickets</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
+
             <li>
-              <a href="#invoices">
+              <ActiveLink href="/invoices">
                 <span className="flex items-center">
                   <FaReceipt className="text-3xl mr-4" />
                   <span>Invoices</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
+
             <li>
-              <a href="#analytics">
+              <ActiveLink href="/analytics">
                 <span className="flex items-center">
                   <RiBarChart2Fill className="text-3xl mr-4" />
                   <span>Analytics</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
+
             <li>
-              <a href="#payments">
+              <ActiveLink href="/payments">
                 <span className="flex items-center">
                   <GoCreditCard className="text-2xl mr-4" />
                   <span>Payments</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
+
             <li>
-              <a href="#settings">
+              <ActiveLink href="/settings">
                 <span className="flex items-center">
                   <IoIosSettings className="text-3xl mr-4" />
                   <span>Settings</span>
                 </span>
-              </a>
+              </ActiveLink>
             </li>
           </ul>
         </nav>
