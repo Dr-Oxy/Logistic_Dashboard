@@ -13,6 +13,11 @@ html {
 }
 
 /* sidebar */
+/* @media screen and (max-width: 1023px) {
+  .sidebar {
+    display: none;
+  }
+} */
 
 .sidebar__ul li {
   margin-bottom: 15px;
@@ -34,11 +39,6 @@ html {
   background-color: rgba(56, 108, 226);
 }
 
-@media screen and (max-width: 1023px) {
-  .sidebar {
-    display: none;
-  }
-}
 /* scrollbar */
 
 .sidebar::-webkit-scrollbar {

@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+
 //import icons
 import { GoHome, GoPerson, GoCreditCard } from 'react-icons/go';
 import { ImTruck, ImStatsBars } from 'react-icons/im';
@@ -5,15 +7,30 @@ import { MdPeople, MdSupport } from 'react-icons/md';
 import { RiSailboatFill, RiBarChart2Fill } from 'react-icons/ri';
 import { IoIosSettings } from 'react-icons/io';
 import { FaReceipt } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
 
-import Link from 'next/link';
+//import component
 import ActiveLink from './ActiveLink';
 
+//import utilities
+import { DataContext } from '../Utils/DataContext';
+
 const Sidebar = () => {
+  const { handleSidebar, isShown } = useContext(DataContext);
+
   return (
-    <aside className="sidebar bg-white w-72 h-full fixed top-0 left-0  pt-10  overflow-y-auto flex flex-col">
-      <div className="sidebar__logo uppercase font-bold text-2xl text-black px-8 mb-12">
-        ipi.
+    <aside className="sidebar bg-white w-72 h-full fixed top-0 left-0  pt-10  overflow-y-auto flex flex-col z-30">
+      <div className="sidebar__logo px-8 mb-12 flex justify-between items-center">
+        <div className="uppercase font-bold text-2xl text-black">ipi.</div>
+
+        {isShown ? (
+          <IoClose
+            onClick={handleSidebar}
+            className="text-3xl cursor-pointer text-gray-500 lg:hidden"
+          />
+        ) : (
+          ''
+        )}
       </div>
 
       <div className="sidebar__main-content px-6 mb-16">

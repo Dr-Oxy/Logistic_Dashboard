@@ -1,11 +1,17 @@
 import Head from 'next/head';
 
+import { useContext } from 'react';
+
+import { DataContext } from '../Utils/DataContext';
+
 //import components
 import Theme from './Theme';
 import Sidebar from '../components/Sidebar';
 import TopNav from './TopNav';
 
 export const Layout = ({ children }) => {
+  const { isShown } = useContext(DataContext);
+
   return (
     <div className="layout__container">
       <Head>

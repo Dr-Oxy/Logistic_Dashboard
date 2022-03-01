@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
 //components
-
 import Card from '../components/Card';
 import Analytics from '../components/Analytics';
 
@@ -14,9 +13,7 @@ import { ImStatsBars } from 'react-icons/im';
 import home from '../styles/Home.module.css';
 
 //Utilities
-import { monthData } from '../Utils/monthData';
-
-import { yearData } from '../Utils/yearData';
+import { DataContext } from '../Utils/DataContext';
 
 export default function Home() {
   //Toggle the tab view
@@ -26,10 +23,10 @@ export default function Home() {
     setToggleState(index);
   };
 
-  //change chart variables
-  const [month] = useState(monthData);
+  //Declare chart variables
+  const { monthData } = useContext(DataContext);
 
-  const [year] = useState(yearData);
+  const { yearData } = useContext(DataContext);
 
   return (
     <section className="home">
@@ -115,7 +112,11 @@ export default function Home() {
                 : `${home.tab__content}`
             }
           >
-            <Analytics shipment={60000} activeVehicle={237889} stats={month} />
+            <Analytics
+              shipment={60000}
+              activeVehicle={237889}
+              stats={monthData}
+            />
           </div>
 
           <div
@@ -128,7 +129,7 @@ export default function Home() {
             <Analytics
               shipment={23360000}
               activeVehicle={4237889}
-              stats={year}
+              stats={yearData}
             />
           </div>
         </div>
