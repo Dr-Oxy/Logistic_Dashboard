@@ -53,7 +53,7 @@ const Sidebar = () => {
             <li>
               <a href="#shippers">
                 <span className="flex items-center">
-                  <ImStatsBars className="text-3xl mr-4 -rotate-12" />
+                  <RiSailboatFill className="text-3xl mr-4" />
                   <span>Shippers</span>
                 </span>
               </a>

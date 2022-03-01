@@ -4,6 +4,8 @@ import { IoSearch } from 'react-icons/io5';
 
 import styles from '../styles/styles.module.css';
 
+import TableRow from '../components/TableRow';
+
 const Vehicles = () => {
   //Toggle the tab view
   const [toggleState, setToggleState] = useState(1);
@@ -24,9 +26,7 @@ const Vehicles = () => {
       {/* Table group */}
 
       <div className={styles.table__wrap}>
-        <div
-          className={`${styles.table__tab__heading} flex items-center whitespace-nowrap overflow-x-auto md:px-6 border-b-2 border-b-gray-200`}
-        >
+        <div className=" flex items-center whitespace-nowrap overflow-x-auto md:px-6 border-b-2 border-b-gray-200">
           <a
             className={
               toggleState === 1
@@ -80,7 +80,7 @@ const Vehicles = () => {
           </a>
         </div>
 
-        <div className={`${styles.table__content} `}>
+        <div className={styles.table__content}>
           <div
             className={
               toggleState === 1
@@ -88,7 +88,17 @@ const Vehicles = () => {
                 : `${styles.tableTab__content}`
             }
           >
-            All vehicles here
+            <div className="overflow-x-auto whitespace-nowrap md:px-6">
+              <table className={`${styles.table} border-separate w-full`}>
+                <tbody>
+                  <TableRow />
+
+                  <TableRow />
+
+                  <TableRow />
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

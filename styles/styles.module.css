@@ -21,3 +21,13 @@
 .tableTab__content__active {
   display: block;
 }
+
+/* table styling */
+.table {
+  border-spacing: 0 30px;
+  border-collapse: none !important;
+}
+
+.table__row td {
+  padding: 30px;
+}
