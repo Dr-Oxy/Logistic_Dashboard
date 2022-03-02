@@ -3,7 +3,7 @@ import chart from '../styles/Chart.module.css';
 
 const Analytics = ({ activeVehicle, shipment, stats }) => {
   return (
-    <div className="bg-white h-auto mt-6 rounded-md">
+    <div className="bg-white h-auto mt-6 rounded-md py-6">
       <div className="md:flex  items-center justify-between p-5 md:px-10 md:py-5">
         <div className="flex items-center mb-6 md:mb-0 ">
           <div className="mr-10 md:mr-32">
