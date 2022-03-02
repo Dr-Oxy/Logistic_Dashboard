@@ -57,3 +57,16 @@ html {
 .theme__active {
   background-color: rgb(243, 243, 243);
 }
+
+/* table row action styling */
+.cancelled {
+  background-color: rgba(237, 38, 53, 1);
+}
+
+.completed {
+  background-color: rgba(36, 99, 242, 1);
+}
+
+.transit {
+  background-color: rgba(47, 160, 114, 1);
+}

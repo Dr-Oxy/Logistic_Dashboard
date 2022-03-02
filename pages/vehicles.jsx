@@ -1,10 +1,16 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
+//icon
 import { IoSearch } from 'react-icons/io5';
 
+//style
 import styles from '../styles/styles.module.css';
 
+//component
 import TableRow from '../components/TableRow';
+
+//utility
+import { DataContext } from '../Utils/DataContext';
 
 const Vehicles = () => {
   //Toggle the tab view
@@ -13,6 +19,8 @@ const Vehicles = () => {
   const toggleTab = (index) => {
     setToggleState(index);
   };
+
+  const { allVehData } = useContext(DataContext);
 
   return (
     <section className="vehicles">
@@ -91,11 +99,9 @@ const Vehicles = () => {
             <div className="overflow-x-auto whitespace-nowrap md:px-6">
               <table className={`${styles.table} border-separate w-full`}>
                 <tbody>
-                  <TableRow />
-
-                  <TableRow />
-
-                  <TableRow />
+                  {allVehData.map((item) => (
+                    <TableRow item={item} key={item.id} />
+                  ))}
                 </tbody>
               </table>
             </div>
