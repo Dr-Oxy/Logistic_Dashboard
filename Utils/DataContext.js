@@ -11,6 +11,7 @@ export const DataContextProvider = (props) => {
     setIsShown(!isShown);
   };
 
+  // chart data
   const [monthData] = useState({
     labels: [
       'Oct 22',
@@ -30,18 +31,18 @@ export const DataContextProvider = (props) => {
 
   const [yearData] = useState({
     labels: [
-      'Jan 01',
-      'Feb 01',
-      'Mar 01',
-      'Apr 01',
-      'May 01',
-      'Jun 01',
-      'Jul 01',
-      'Aug 01',
-      'Sep 01',
-      'Oct 01',
-      'Nov 01',
-      'Dec 31',
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
     ],
 
     ShipmentStats: [
@@ -55,6 +56,46 @@ export const DataContextProvider = (props) => {
     ],
   });
 
+  //table data
+  const [allVehData] = useState([
+    {
+      vehicle: 'Toyolta Highlander 2004',
+      regNo: 'Et-272-KJ',
+      start: 'Lagos',
+      end: 'Ikeja',
+      deliveryStatus: 'In transit',
+      driver: 'Johnson C',
+      img: '/',
+    },
+    {
+      vehicle: 'Honda Suv 2012',
+      regNo: 'Abj-272-KJ',
+      start: 'Maitaima',
+      end: 'Gra phase II',
+      deliveryStatus: 'cancelled',
+      driver: 'Ahmed Lasisi',
+      img: '/',
+    },
+    {
+      vehicle: 'Toyolta Highlander 2004',
+      regNo: 'Ph-272-KJ',
+      start: 'Lagos',
+      end: 'Ikeja',
+      deliveryStatus: 'completed',
+      driver: 'Johnson C',
+      img: '/',
+    },
+    {
+      vehicle: 'Toyolta Highlander 2004',
+      regNo: 'Edo-272-KJ',
+      start: 'Lagos',
+      end: 'Ikeja',
+      deliveryStatus: 'in transit',
+      driver: 'Johnson C',
+      img: '/',
+    },
+  ]);
+
   return (
     <DataContext.Provider
       value={{
@@ -63,6 +104,7 @@ export const DataContextProvider = (props) => {
         isShown,
         monthData,
         yearData,
+        allVehData,
       }}
     >
       {props.children}

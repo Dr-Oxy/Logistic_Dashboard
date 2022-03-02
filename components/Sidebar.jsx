@@ -4,10 +4,11 @@ import { useContext } from 'react';
 import { GoHome, GoPerson, GoCreditCard } from 'react-icons/go';
 import { ImTruck, ImStatsBars } from 'react-icons/im';
 import { MdPeople, MdSupport } from 'react-icons/md';
-import { RiSailboatFill, RiBarChart2Fill } from 'react-icons/ri';
+import { RiBarChart2Fill } from 'react-icons/ri';
 import { IoIosSettings } from 'react-icons/io';
 import { FaReceipt } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
+import { FaShip } from 'react-icons/fa';
 
 //import component
 import ActiveLink from './ActiveLink';
@@ -76,7 +77,7 @@ const Sidebar = () => {
             <li>
               <ActiveLink href="/shippers">
                 <span className="flex items-center">
-                  <RiSailboatFill className="text-3xl mr-4" />
+                  <FaShip className="text-3xl mr-4" />
                   <span>Shippers</span>
                 </span>
               </ActiveLink>

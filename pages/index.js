@@ -7,7 +7,7 @@ import Analytics from '../components/Analytics';
 //icons
 import { GoPerson } from 'react-icons/go';
 import { MdPeople, MdWbSunny } from 'react-icons/md';
-import { ImStatsBars } from 'react-icons/im';
+import { FaShip } from 'react-icons/fa';
 
 //style
 import home from '../styles/Home.module.css';
@@ -57,7 +57,7 @@ export default function Home() {
           joined="3467 shipped today"
           bg="bg-pink-500"
           hover="hover:bg-pink-500"
-          icon={<ImStatsBars />}
+          icon={<FaShip />}
         />
       </div>
 
