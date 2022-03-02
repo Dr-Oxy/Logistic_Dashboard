@@ -69,10 +69,14 @@ export default function Home() {
             <p>Shipping is going pretty well today. Heres what we have</p>
           </div>
 
-          <div className="md:w-1/4 mt-4 md:mt-0 bg-white py-1 text-black px-10 flex items-center justify-around rounded-full ">
-            <a href="#1d">1D</a>
+          <div className="md:w-1/3 mt-4 md:mt-0 bg-white py-2 text-black px-2 flex items-center justify-evenly rounded-full ">
+            <a className={home.tabs} href="#1d">
+              1D
+            </a>
 
-            <a href="#5d">5D</a>
+            <a className={home.tabs} href="#5d">
+              5D
+            </a>
 
             <a
               href="#oneMonth"
@@ -98,7 +102,9 @@ export default function Home() {
               1Y
             </a>
 
-            <a href="#max">Max</a>
+            <a className={home.tabs} href="#max">
+              Max
+            </a>
           </div>
         </div>
 
