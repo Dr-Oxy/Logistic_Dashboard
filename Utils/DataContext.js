@@ -3,8 +3,7 @@ import { useState, createContext } from 'react';
 export const DataContext = createContext();
 
 export const DataContextProvider = (props) => {
-  const [isMobile, setIsMobile] = useState(false);
-
+  // sidebar mobile toggle
   const [isShown, setIsShown] = useState(false);
 
   const handleSideOpen = () => {
@@ -13,6 +12,25 @@ export const DataContextProvider = (props) => {
 
   const handleSideClose = () => {
     setIsShown(false);
+  };
+
+  //Modal toggle
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = (idx) => {
+    setIsOpen(true);
+
+    ModalItem(idx);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const [currentItem, setCurrentItem] = useState(null);
+
+  const ModalItem = (id) => {
+    setCurrentItem(id);
   };
 
   // chart data
@@ -114,11 +132,14 @@ export const DataContextProvider = (props) => {
       value={{
         handleSideOpen,
         handleSideClose,
-        isMobile,
         isShown,
+        isOpen,
+        handleClose,
+        handleOpen,
         monthData,
         yearData,
         allVehData,
+        currentItem,
       }}
     >
       {props.children}

@@ -1,12 +1,16 @@
+import { useContext } from 'react';
+
 /* eslint-disable @next/next/no-img-element */
 import styles from '../styles/styles.module.css';
 import { ImTruck } from 'react-icons/im';
 import { MdMoreVert } from 'react-icons/md';
 
+import { DataContext } from '../Utils/DataContext';
+
 const TableRow = ({ item }) => {
   const color = item.colorStats;
 
-  // const bg = `styles.${color}`;
+  const { handleOpen, ModalItem } = useContext(DataContext);
 
   return (
     <tr className={`${styles.table__row} bg-white`}>
@@ -21,17 +25,17 @@ const TableRow = ({ item }) => {
       </td>
 
       <td className="capitalize">
-        <p className="font-bold text-black">{item.start}</p>
+        <p className="font-semibold text-black">{item.start}</p>
         <p className="text-gray-400 text-sm">start location</p>
       </td>
 
       <td className="capitalize">
-        <p className="font-bold text-black">{item.end}</p>
+        <p className="font-semibold text-black">{item.end}</p>
         <p className="text-gray-400 text-sm">destination</p>
       </td>
 
       <td className="capitalize ">
-        <p className="font-bold text-black">{item.deliveryStatus}</p>
+        <p className="font-semibold text-black">{item.deliveryStatus}</p>
         <p className="text-gray-400 text-sm">status</p>
       </td>
 
@@ -45,7 +49,7 @@ const TableRow = ({ item }) => {
             />
           </div>
           <div className="ml-3 capitalize">
-            <p className="font-bold text-black mb-1">{item.driver}</p>
+            <p className="font-semibold text-black mb-1">{item.driver}</p>
             <p className="text-gray-400 text-sm">transporter</p>
           </div>
         </div>
@@ -57,12 +61,13 @@ const TableRow = ({ item }) => {
             <div className="flex items-center border-2 border-gray-300 rounded-full p-2">
               <div className={`${color} h-3 w-3 rounded-full`}></div>
 
-              <div className="ml-2 capitalize font-bold text-black">
+              <div className="ml-2 capitalize font-semibold text-black">
                 {item.deliveryStatus}
               </div>
             </div>
 
             <a
+              onClick={() => handleOpen(item)}
               className="text-gray-400 text-sm block mt-2 text underline capitalize"
               href="#"
             >

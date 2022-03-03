@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`bg-white  w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-30  ${
+      className={`bg-white  w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-20  ${
         isShown ? 'block animate-slideIn' : 'hidden'
       }   lg:block`}
     >

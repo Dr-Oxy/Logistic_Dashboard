@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         'custom-blue': 'rgba(56, 108, 226)',
         'dark-blue': 'rgb(1, 27, 87, 0.75)',
+        'overlay-black': 'rgba(0, 0, 0, 0.301)',
       },
       keyframes: {
         slideIn: {
