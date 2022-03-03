@@ -12,12 +12,17 @@ html {
   box-sizing: border-box;
 }
 
-/* sidebar */
-/* @media screen and (max-width: 1023px) {
-  .sidebar {
-    display: none;
-  }
-} */
+.display-toggle {
+  display: none;
+}
+
+.show-hide {
+  display: block;
+}
+
+.side-margin {
+  margin-left: 300px;
+}
 
 .sidebar__ul li {
   margin-bottom: 15px;

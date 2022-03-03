@@ -17,16 +17,20 @@ import ActiveLink from './ActiveLink';
 import { DataContext } from '../Utils/DataContext';
 
 const Sidebar = () => {
-  const { handleSidebar, isShown } = useContext(DataContext);
+  const { handleSideClose, isShown } = useContext(DataContext);
 
   return (
-    <aside className="sidebar bg-white w-72 h-full fixed top-0 left-0  pt-10  overflow-y-auto flex flex-col z-30">
+    <aside
+      className={`bg-white w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-30  ${
+        isShown ? 'block' : 'hidden'
+      }   lg:block`}
+    >
       <div className="sidebar__logo px-8 mb-12 flex justify-between items-center">
         <div className="uppercase font-bold text-2xl text-black">ipi.</div>
 
         {isShown ? (
           <IoClose
-            onClick={handleSidebar}
+            onClick={handleSideClose}
             className="text-3xl cursor-pointer text-gray-500 lg:hidden"
           />
         ) : (

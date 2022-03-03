@@ -7,8 +7,12 @@ export const DataContextProvider = (props) => {
 
   const [isShown, setIsShown] = useState(false);
 
-  const handleSideBar = () => {
-    setIsShown(!isShown);
+  const handleSideOpen = () => {
+    setIsShown(true);
+  };
+
+  const handleSideClose = () => {
+    setIsShown(false);
   };
 
   // chart data
@@ -108,7 +112,8 @@ export const DataContextProvider = (props) => {
   return (
     <DataContext.Provider
       value={{
-        handleSideBar,
+        handleSideOpen,
+        handleSideClose,
         isMobile,
         isShown,
         monthData,

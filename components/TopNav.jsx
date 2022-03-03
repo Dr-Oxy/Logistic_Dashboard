@@ -9,11 +9,11 @@ import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoMenu } from 'react-icons/io5';
 
 const TopNav = () => {
-  const { handleSideBar } = useContext(DataContext);
+  const { handleSideOpen } = useContext(DataContext);
 
   return (
     <div className="vertical__nav flex items-center">
-      <div className="lg:hidden cursor-pointer" onClick={handleSideBar}>
+      <div className="lg:hidden cursor-pointer" onClick={handleSideOpen}>
         <IoMenu className="text-3xl text-gray-500" />
       </div>
 
