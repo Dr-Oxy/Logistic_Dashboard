@@ -1,6 +1,11 @@
 import { useRouter } from 'next/router';
 
+import { useContext } from 'react';
+import { DataContext } from '../Utils/DataContext';
+
 const ActiveLink = ({ children, href }) => {
+  const { handleSideClose } = useContext(DataContext);
+
   const router = useRouter();
 
   const isCurrentPath = router.pathname === href || router.asPath === href;
@@ -9,6 +14,7 @@ const ActiveLink = ({ children, href }) => {
     e.preventDefault();
 
     router.push(href);
+    handleSideClose();
   };
 
   return (

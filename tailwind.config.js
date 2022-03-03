@@ -12,6 +12,19 @@ module.exports = {
         'custom-blue': 'rgba(56, 108, 226)',
         'dark-blue': 'rgb(1, 27, 87, 0.75)',
       },
+      keyframes: {
+        slideIn: {
+          '0%': {
+            transform: 'translateX(-200px)',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          },
+        },
+      },
+      animation: {
+        slideIn: 'slideIn 1s',
+      },
     },
   },
   plugins: [],
