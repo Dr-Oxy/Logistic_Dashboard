@@ -21,9 +21,11 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`bg-white  w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-20  ${
-        isShown ? 'block animate-slideIn' : 'hidden'
-      }   lg:block`}
+      className={`sidebar bg-white  w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-20 ${
+        isShown
+          ? 'animate-slideIn lg:animate-none'
+          : 'animate-slideOut lg:animate-none -left-96 lg:left-0'
+      }`}
     >
       <div className="sidebar__logo px-8 mb-12 flex justify-between items-center">
         <div className="uppercase font-bold text-2xl text-black">ipi.</div>

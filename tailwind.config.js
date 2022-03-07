@@ -22,9 +22,24 @@ module.exports = {
             transform: 'translateX(0)',
           },
         },
+        slideOut: {
+          '0%': {
+            left: '-10px',
+            opacity: '0.8',
+          },
+          '50%': {
+            left: '-300px',
+            opacity: '0.5',
+          },
+          '100%': {
+            left: '-380px',
+            opacity: '0',
+          },
+        },
       },
       animation: {
         slideIn: 'slideIn 1s',
+        slideOut: 'slideOut 1s',
       },
     },
   },
