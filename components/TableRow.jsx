@@ -41,7 +41,7 @@ const TableRow = ({ item }) => {
 
       <td>
         <div className="flex items-center">
-          <div className="h-12 w-12 rounded bg-gray-200">
+          <div className="h-12 w-12 rounded-full bg-gray-200">
             <img
               className="h-12 w-12 object-cover rounded-full"
               src={item.img}

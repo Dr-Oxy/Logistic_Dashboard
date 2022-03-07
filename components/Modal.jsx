@@ -5,6 +5,7 @@ import modalStyles from '../styles/styles.module.css';
 
 import { FaRegWindowClose } from 'react-icons/fa';
 import { ImTruck } from 'react-icons/im';
+import { GoSearch } from 'react-icons/go';
 
 import { DataContext } from '../Utils/DataContext';
 
@@ -60,8 +61,10 @@ const Modal = (id, children) => {
             </div>
           </div>
           {/* body right */}
-          <div className="bg-gray-400 lg:flex-1 h-72 lg:ml-16 mt-4 lg:mt-0">
-            Map/ beamer
+          <div className="lg:flex-1 h-72 lg:ml-16 mt-4 lg:mt-0 flex items-center p-8">
+            <div className="h-28 w-28 rounded-full flex items-center justify-center bg-blue-pulse animate-beat">
+              <GoSearch className="text-2xl text-dark-blue" />
+            </div>
           </div>
         </div>
 
