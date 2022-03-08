@@ -10,7 +10,7 @@ import { DataContext } from '../Utils/DataContext';
 const TableRow = ({ item }) => {
   const color = item.colorStats;
 
-  const { handleOpen, ModalItem } = useContext(DataContext);
+  const { handleOpen } = useContext(DataContext);
 
   return (
     <tr className={`${styles.table__row} bg-white`}>

@@ -16,15 +16,22 @@ export const DataContextProvider = (props) => {
 
   //Modal toggle
   const [isOpen, setIsOpen] = useState(false);
+  const [isFound, setIsFound] = useState(false);
 
   const handleOpen = (idx) => {
     setIsOpen(true);
 
     ModalItem(idx);
+
+    setTimeout(() => {
+      setIsFound(true);
+    }, 10000);
   };
 
   const handleClose = () => {
     setIsOpen(false);
+
+    setIsFound(false);
   };
 
   const [currentItem, setCurrentItem] = useState(null);
@@ -140,6 +147,7 @@ export const DataContextProvider = (props) => {
         yearData,
         allVehData,
         currentItem,
+        isFound,
       }}
     >
       {props.children}
