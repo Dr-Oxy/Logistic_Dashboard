@@ -25,16 +25,18 @@ const Vehicles = () => {
   return (
     <section className="vehicles">
       <div className="mt-10 mb-8 ">
-        <h1 className="text-2xl md:text-3xl text-black font-bold">Vehicles</h1>
-        <p className="text-gray-500 mt-3 capitalize">
+        <h1 className="text-2xl md:text-3xl text-black dark:text-white font-bold">
+          Vehicles
+        </h1>
+        <p className="text-gray-500 dark:text-gray-300 mt-3 capitalize">
           Manage and track all vehicles on the IPI network
         </p>
       </div>
 
       {/* Table group */}
 
-      <div className={styles.table__wrap}>
-        <div className=" flex items-center whitespace-nowrap overflow-x-auto md:px-6 border-b-2 border-b-gray-200">
+      <div className="bg-off-white dark:bg-night-black">
+        <div className=" flex items-center whitespace-nowrap overflow-x-auto md:px-6 border-b-2 border-b-gray-200 dark:border-b-trans-white">
           <a
             className={
               toggleState === 1

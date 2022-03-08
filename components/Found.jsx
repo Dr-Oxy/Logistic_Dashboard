@@ -23,7 +23,7 @@ const Tracking = () => {
                 <p className="text-sm">Transporter</p>
               </div>
             </div>
-            <button className="mt-3 lg:mt-0 border-0 outline outline-1 outline-black rounded-full px-8 py-1 ml-2 hover:bg-black hover:text-white capitalize">
+            <button className="mt-3 lg:mt-0 border-0 outline outline-1 outline-black dark:outline-white rounded-full px-8 py-1 ml-2 hover:bg-black hover:text-white capitalize">
               view
             </button>
           </div>

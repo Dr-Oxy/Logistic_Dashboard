@@ -1,9 +1,10 @@
 import Head from 'next/head';
 
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 
 import { DataContext } from '../Utils/DataContext';
 
+import { useTheme } from 'next-themes';
 //import components
 import Theme from './Theme';
 import Sidebar from '../components/Sidebar';
@@ -13,6 +14,14 @@ import Modal from './Modal';
 
 export const Layout = ({ children }) => {
   const { isOpen } = useContext(DataContext);
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  const { setTheme } = useTheme();
+
+  // useEffect(() => {
+  //   setIsMounted(true);
+  // }, [])
 
   return (
     <div className="layout__container relative">
@@ -24,11 +33,11 @@ export const Layout = ({ children }) => {
 
       <Sidebar />
 
-      <main className="bg-gray-50 text-gray-500 pl-8 pr-14 md:pr-20 py-8 min-h-screen lg:ml-72 relative">
+      <main className="bg-gray-50 dark:bg-black text-gray-500 dark:text-white pl-8 pr-14 md:pr-20 py-8 min-h-screen lg:ml-72 relative">
         <TopNav />
         {children}
       </main>
-      <Theme />
+      <Theme setTheme={setTheme} />
 
       {isOpen ? <Modal /> : ''}
     </div>

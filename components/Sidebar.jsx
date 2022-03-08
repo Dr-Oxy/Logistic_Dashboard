@@ -21,19 +21,21 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`sidebar bg-white  w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-20 ${
+      className={`sidebar bg-white dark:bg-night-blue  w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-20 ${
         isShown
           ? 'animate-slideIn lg:animate-none'
           : 'animate-slideOut lg:animate-none -left-96 lg:left-0'
       }`}
     >
       <div className="sidebar__logo px-8 mb-12 flex justify-between items-center">
-        <div className="uppercase font-bold text-2xl text-black">ipi.</div>
+        <div className="uppercase font-bold text-2xl text-black dark:text-white">
+          ipi.
+        </div>
 
         {isShown ? (
           <IoClose
             onClick={handleSideClose}
-            className="text-3xl cursor-pointer text-gray-500 lg:hidden"
+            className="text-3xl cursor-pointer text-gray-500 dark:text-white lg:hidden"
           />
         ) : (
           ''
@@ -44,7 +46,7 @@ const Sidebar = () => {
         <h6 className="uppercase text-sm text-gray-500 mb-5 ml-1">main menu</h6>
 
         <nav>
-          <ul className="sidebar__ul">
+          <ul className="sidebar__ul text-dark-blue dark:text-gray-300">
             <li>
               <ActiveLink href="/">
                 <span className="flex items-center">
@@ -98,7 +100,7 @@ const Sidebar = () => {
         </h6>
 
         <nav>
-          <ul className="sidebar__ul">
+          <ul className="sidebar__ul text-dark-blue dark:text-gray-300">
             <li>
               <ActiveLink href="/tickets">
                 <span className="flex items-center">
@@ -147,7 +149,7 @@ const Sidebar = () => {
         </nav>
       </div>
 
-      <div className="sidebar__logout text-center bg-gray-200 justify-self-end p-5 cursor-pointer">
+      <div className="sidebar__logout text-center bg-gray-200 dark:bg-trans-white justify-self-end p-5 cursor-pointer">
         <a href="#logOut">Log out</a>
       </div>
     </aside>

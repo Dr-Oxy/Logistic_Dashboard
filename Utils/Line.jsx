@@ -37,7 +37,7 @@ const options = {
 
 const LineChart = ({ stats }) => {
   return (
-    <div className="p-5 md:px-10 py-5 bg-white">
+    <div className="p-5 md:px-10 py-5 bg-white dark:bg-night-blue text-white">
       <div style={{ height: '350px', width: ' 100%' }}>
         <Line
           data={{

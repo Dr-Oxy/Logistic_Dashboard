@@ -3,14 +3,19 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
         avatar: "url('/avatar.jpg')",
       },
       colors: {
+        'off-white': 'rgba(246, 248, 251, 1);',
+        'trans-white': 'rgba(226, 234, 255, 0.04);',
         'custom-blue': 'rgba(56, 108, 226)',
-        'dark-blue': 'rgb(1, 27, 87, 0.75)',
+        'dark-blue': 'rgba(1, 27, 87, 0.75)',
+        'night-blue': 'rgba(4, 18, 46, 1)',
+        'night-black': 'rgba(6, 13, 28, 1)',
         'overlay-black': 'rgba(0, 0, 0, 0.301)',
         'blue-pulse': 'rgba(56, 108, 226, 0.6)',
       },
