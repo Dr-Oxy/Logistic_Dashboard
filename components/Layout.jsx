@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import { useContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 
 import { DataContext } from '../Utils/DataContext';
 
@@ -15,13 +15,7 @@ import Modal from './Modal';
 export const Layout = ({ children }) => {
   const { isOpen } = useContext(DataContext);
 
-  const [isMounted, setIsMounted] = useState(false);
-
   const { setTheme } = useTheme();
-
-  // useEffect(() => {
-  //   setIsMounted(true);
-  // }, [])
 
   return (
     <div className="layout__container relative">
