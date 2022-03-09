@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { useContext } from 'react';
 
 //import utilities
@@ -7,6 +6,8 @@ import { DataContext } from '../Utils/DataContext';
 //import icons
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoMenu } from 'react-icons/io5';
+
+import Image from 'next/image';
 
 const TopNav = () => {
   const { handleSideOpen } = useContext(DataContext);
@@ -25,7 +26,15 @@ const TopNav = () => {
 
         <div className="line w-1 h-14 bg-gray-300 dark:bg-gray-700 mx-4"></div>
 
-        <div className="bg-avatar bg-cover bg-no-repeat bg-center h-14 w-14 rounded-full "></div>
+        <div className="h-14 w-14 rounded-full relative">
+          <Image
+            className="rounded-full"
+            src="/avatar.jpg"
+            alt="user pic"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </div>
     </div>
   );
