@@ -68,15 +68,18 @@ const TableRow = ({ item }) => {
               </div>
             </div>
 
-            <a
-              onClick={() => handleOpen(item)}
-              className="text-gray-400 text-sm block mt-2 text underline capitalize"
-              href="#"
-            >
-              {item.deliveryStatus === 'in transit'
-                ? 'track shipment'
-                : 'view details'}
-            </a>
+            {item.deliveryStatus === 'in transit' ? (
+              <a
+                onClick={() => handleOpen(item)}
+                className="text-gray-400 text-sm block mt-2 text underline capitalize cursor-pointer"
+              >
+                track shipment
+              </a>
+            ) : (
+              <a className="text-gray-400 text-sm block mt-2 text underline capitalize cursor-pointer">
+                view details
+              </a>
+            )}
           </div>
 
           <MdMoreVert className="ml-3 text-3xl cursor-pointer" />
