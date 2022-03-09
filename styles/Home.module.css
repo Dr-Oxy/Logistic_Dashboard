@@ -38,9 +38,18 @@
 
 /* tab and chart styling */
 .tabs {
-  padding: 10px;
-  /* color: black; */
+  padding: 15px 20px;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 650px) {
+  .tabs {
+    padding: 10px;
+  }
+}
+
+.tabs:not(:first-child) {
+  margin-left: 10px;
 }
 
 .tabs:hover,

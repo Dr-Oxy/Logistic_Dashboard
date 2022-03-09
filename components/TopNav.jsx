@@ -13,7 +13,7 @@ const TopNav = () => {
 
   return (
     <div className="vertical__nav flex items-center">
-      <div className="lg:hidden cursor-pointer" onClick={handleSideOpen}>
+      <div className="xl:hidden cursor-pointer" onClick={handleSideOpen}>
         <IoMenu className="text-3xl text-gray-500" />
       </div>
 

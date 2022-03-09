@@ -4,13 +4,13 @@ import chart from '../styles/Chart.module.css';
 const Analytics = ({ activeVehicle, shipment, stats }) => {
   return (
     <div className="bg-white dark:bg-night-blue h-auto mt-6 rounded-md py-6">
-      <div className="md:flex  items-center justify-between p-5 md:px-10 md:py-5">
-        <div className="flex items-center mb-6 md:mb-0 ">
+      <div className="lg:flex  items-center justify-between p-5 md:px-10 md:py-5">
+        <div className="flex items-center mb-6 lg:mb-0 ">
           <div className="mr-10 md:mr-32">
             <p className="font-bold uppercase text-xs md:text-sm mb-1">
               shipment
             </p>
-            <h2 className="font-bold text-black dark:text-white text-lg md:text-2xl">
+            <h2 className="font-bold text-black dark:text-white text-base md:text-2xl">
               {shipment.toLocaleString('en-US')}
             </h2>
           </div>
@@ -19,7 +19,7 @@ const Analytics = ({ activeVehicle, shipment, stats }) => {
             <p className="font-bold uppercase text-xs md:text-sm mb-1">
               active vehicles
             </p>
-            <h2 className="font-bold text-black dark:text-white text-lg md:text-2xl">
+            <h2 className="font-bold text-black dark:text-white text-base md:text-2xl">
               {activeVehicle.toLocaleString('en-US')}
             </h2>
           </div>

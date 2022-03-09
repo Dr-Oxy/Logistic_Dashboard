@@ -27,7 +27,7 @@ export const Layout = ({ children }) => {
 
       <Sidebar />
 
-      <main className="bg-gray-50 dark:bg-black text-gray-500 dark:text-white pl-8 pr-14 md:pr-20 py-8 min-h-screen lg:ml-72 relative">
+      <main className="bg-gray-50 dark:bg-black text-gray-500 dark:text-white pl-8 pr-14 md:pr-20 py-8 min-h-screen xl:ml-72 relative">
         <TopNav />
         {children}
       </main>
