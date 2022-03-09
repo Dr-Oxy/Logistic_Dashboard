@@ -17,6 +17,7 @@ module.exports = {
         'night-blue': 'rgba(4, 18, 46, 1)',
         'night-black': 'rgba(6, 13, 28, 1)',
         'overlay-black': 'rgba(0, 0, 0, 0.301)',
+        'overlay-dark': 'rgba(0, 0, 0, 0.7)',
         'blue-pulse': 'rgba(56, 108, 226, 0.6)',
       },
       keyframes: {
