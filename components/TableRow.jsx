@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 
-/* eslint-disable @next/next/no-img-element */
+import Image from 'next/image';
+
 import styles from '../styles/styles.module.css';
 import { ImTruck } from 'react-icons/im';
 import { MdMoreVert } from 'react-icons/md';
@@ -43,11 +44,14 @@ const TableRow = ({ item }) => {
 
       <td>
         <div className="flex items-center">
-          <div className="h-12 w-12 rounded-full bg-gray-200">
-            <img
-              className="h-12 w-12 object-cover rounded-full"
+          <div className="h-12 w-12 rounded-full bg-gray-200 relative">
+            <Image
+              className="rounded-full"
               src={item.img}
               alt={item.driver}
+              layout="fill"
+              objectFit="cover"
+              priority
             />
           </div>
           <div className="ml-3 capitalize">
