@@ -30,7 +30,7 @@ const Tracking = () => {
         </div>
 
         <div className=" border-b-2 bordr-gray-200 py-4">
-          <p className="font-semibold mb-1">Ikeja, Lagos NG</p>
+          <p className="font-semibold mb-1">{currentItem.current}</p>
           <p>Current location</p>
         </div>
 
@@ -48,7 +48,7 @@ const Tracking = () => {
               width="600"
               height="500"
               id="gmap_canvas"
-              src="https://maps.google.com/maps?q=ikeja,%20lagos&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src={`https://maps.google.com/maps?q=${currentItem.current}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
               frameBorder="0"
               scrolling="no"
               marginHeight="0"
