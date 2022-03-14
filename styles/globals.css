@@ -37,10 +37,15 @@ html {
   transition: all 0.3s ease-in;
 }
 
-.sidebar__ul a:hover,
+.sidebar__ul a:hover.active,
 .sidebar__ul a.active {
   color: #fff;
   background-color: rgba(56, 108, 226);
+}
+
+.sidebar__ul a:hover {
+  background-color: rgba(56, 108, 226, 0.3);
+  color: white;
 }
 
 /* scrollbar */

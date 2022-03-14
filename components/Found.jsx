@@ -45,7 +45,7 @@ const Tracking = () => {
         <div className="mapouter relative text-right h-full w-full">
           <div className="gmap_canvas overflow-hidden bg-none h-full w-full">
             <iframe
-              width="600"
+              width="100%"
               height="500"
               id="gmap_canvas"
               src={`https://maps.google.com/maps?q=${currentItem.current}&t=&z=13&ie=UTF8&iwloc=&output=embed`}

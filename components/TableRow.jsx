@@ -51,7 +51,7 @@ const TableRow = ({ item }) => {
               alt={item.driver}
               layout="fill"
               objectFit="cover"
-              priority
+              priority="true"
             />
           </div>
           <div className="ml-3 capitalize">

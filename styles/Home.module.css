@@ -48,14 +48,14 @@
   }
 }
 
-.tabs:not(:first-child) {
-  margin-left: 10px;
-}
-
-.tabs:hover,
+.tabs:hover.tab__active,
 .tab__active {
   background-color: rgba(56, 108, 226, 1);
   color: white;
+}
+
+.tabs:hover {
+  background-color: rgba(56, 108, 226, 0.3);
 }
 
 .tab__content {

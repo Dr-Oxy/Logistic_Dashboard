@@ -42,7 +42,7 @@ export default function Home() {
       <div className={home.card__grid}>
         <Card
           bg="bg-blue-700"
-          hover="hover:bg-blue-700 dark:hover:bg-blue-600"
+          hover="hover:bg-blue-700[0.9] dark:hover:bg-blue-700/[0.9]"
           icon={<GoPerson />}
         />
 
@@ -51,7 +51,7 @@ export default function Home() {
           heading="15.6m"
           joined="3467 onboard today"
           bg="bg-green-400"
-          hover="hover:bg-green-300 dark:hover:bg-green-300"
+          hover="hover:bg-green-400/[0.9] dark:hover:bg-green-400/[0.9]"
           icon={<MdPeople />}
         />
 
@@ -60,14 +60,14 @@ export default function Home() {
           heading="348.9k"
           joined="3467 shipped today"
           bg="bg-pink-500"
-          hover="hover:bg-pink-500 dark:hover:bg-pink-400"
+          hover="hover:bg-pink-500/[0.9] dark:hover:bg-pink-500/[0.9]"
           icon={<FaShip />}
         />
       </div>
 
       <div className="my-10 text-gray-500 dark:text-gray-200 relative">
         {/* tab heading */}
-        <div className=" md:flex justify-between items-center">
+        <div className=" lg:flex justify-between items-center">
           <div>
             <h5 className="text-black dark:text-white font-bold text-2xl mb-3">
               Shipments
@@ -75,7 +75,7 @@ export default function Home() {
             <p>Shipping is going pretty well today. Heres what we have</p>
           </div>
 
-          <div className=" mt-4 md:mt-0 w-fit bg-white dark:bg-night-blue py-2 px-3 text-black dark:text-white  flex items-center rounded-lg ">
+          <div className=" mt-4 lg:mt-0 w-fit bg-white dark:bg-night-blue py-2 px-3 text-black dark:text-white  flex items-center gap-1 rounded-lg ">
             <a className={home.tabs} href="#1d">
               1D
             </a>
