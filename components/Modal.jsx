@@ -19,7 +19,7 @@ const Modal = () => {
         <div className="text-center mb-6 text-black dark:text-white">
           <FaRegWindowClose
             onClick={handleClose}
-            className="text-2xl cursor-pointer absolute top-8 right-8"
+            className="text-2xl rounded-md cursor-pointer absolute top-8 right-8"
           />
           <h1 className="text-3xl font-semibold  mb-2 mt-10 lg:mt-0">
             {isFound ? 'Location Found' : 'Tracking Vehicle'}
