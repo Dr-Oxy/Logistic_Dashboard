@@ -42,7 +42,7 @@ export default function Home() {
       <div className={home.card__grid}>
         <Card
           bg="bg-blue-700"
-          hover="hover:bg-blue-700[0.9] dark:hover:bg-blue-700/[0.9]"
+          hover="hover:bg-blue-700/[0.9] dark:hover:bg-blue-700/[0.9]"
           icon={<GoPerson />}
         />
 

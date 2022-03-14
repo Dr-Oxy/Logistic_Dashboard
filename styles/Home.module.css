@@ -56,6 +56,7 @@
 
 .tabs:hover {
   background-color: rgba(56, 108, 226, 0.3);
+  color: white;
 }
 
 .tab__content {

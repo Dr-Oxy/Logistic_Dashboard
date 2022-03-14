@@ -16,7 +16,7 @@ import Modal from './Modal';
 export const Layout = ({ children }) => {
   const { isOpen } = useContext(DataContext);
 
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   return (
     <div
@@ -36,7 +36,7 @@ export const Layout = ({ children }) => {
         <TopNav />
         {children}
       </main>
-      <Theme setTheme={setTheme} />
+      <Theme theme={theme} setTheme={setTheme} />
 
       {isOpen ? <Modal /> : ''}
     </div>
