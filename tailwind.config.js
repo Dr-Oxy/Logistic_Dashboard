@@ -10,6 +10,7 @@ module.exports = {
         avatar: "url('/avatar.jpg')",
       },
       colors: {
+        'lay-white': '#F0F3F5',
         'off-white': 'rgba(246, 248, 251, 1);',
         'trans-white': 'rgba(226, 234, 255, 0.04);',
         'custom-blue': 'rgba(56, 108, 226)',

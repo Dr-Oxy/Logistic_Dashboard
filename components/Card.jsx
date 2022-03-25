@@ -1,12 +1,12 @@
 import React from 'react';
 import style from '../styles/Home.module.css';
 
-const Card = ({ small, heading, joined, bg, icon, hover }) => {
+const Card = ({ small, heading, joined, bg, icon }) => {
   return (
     <div
-      className={`${style.card} pl-8 bg-white dark:bg-night-blue rounded-md text-gray-400 flex items-center relative ${hover} shadow-sm`}
+      className={`${style.card} pl-8 bg-white dark:bg-night-blue rounded-md text-gray-400 flex items-center relative shadow-sm`}
     >
-      <div>
+      <div className="z-50">
         <p className="uppercase">{small ?? 'registered customers'}</p>
         <h2 className="font-bold text-3xl my-3 text-gray-700 dark:text-white uppercase">
           {heading ?? '380.2k'}
@@ -19,7 +19,7 @@ const Card = ({ small, heading, joined, bg, icon, hover }) => {
       </div>
 
       <div
-        className={`${style.semi} ${bg} hover:h-full hover:w-full h-20 w-20 absolute bottom-0 right-0`}
+        className={`${style.semi} ${bg}  h-20 w-20 absolute bottom-0 right-0`}
       ></div>
     </div>
   );

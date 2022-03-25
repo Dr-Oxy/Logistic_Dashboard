@@ -40,18 +40,13 @@ export default function Home() {
       </div>
 
       <div className={home.card__grid}>
-        <Card
-          bg="bg-blue-700"
-          // hover="hover:bg-blue-700/[0.9] dark:hover:bg-blue-700/[0.9]"
-          icon={<GoPerson />}
-        />
+        <Card bg="bg-blue-700" icon={<GoPerson />} />
 
         <Card
           small="registered transporters"
           heading="15.6m"
           joined="3467 onboard today"
           bg="bg-green-400"
-          // hover="hover:bg-green-400/[0.9] dark:hover:bg-green-400/[0.9]"
           icon={<BsPeopleFill />}
         />
 
@@ -60,7 +55,6 @@ export default function Home() {
           heading="348.9k"
           joined="3467 shipped today"
           bg="bg-pink-500"
-          // hover="hover:bg-pink-500/[0.9] dark:hover:bg-pink-500/[0.9]"
           icon={<FaShip />}
         />
       </div>
