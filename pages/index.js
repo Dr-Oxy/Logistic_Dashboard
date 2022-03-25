@@ -69,7 +69,7 @@ export default function Home() {
             <p>Shipping is going pretty well today. Heres what we have</p>
           </div>
 
-          <div className=" mt-4 lg:mt-0 w-fit bg-white dark:bg-night-blue py-2 px-3 text-black dark:text-white  flex items-center gap-1 rounded-lg ">
+          <div className=" mt-4 lg:mt-0 w-fit bg-white dark:bg-night-blue py-3 px-5 text-black dark:text-white  flex items-center gap-1 rounded-lg ">
             <a className={home.tabs} href="#1d">
               1D
             </a>
