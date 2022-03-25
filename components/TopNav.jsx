@@ -19,7 +19,7 @@ const TopNav = () => {
       </div>
 
       <div className=" ml-auto flex items-center">
-        <div className="w-14 h-14 bg-gray-200 dark:bg-night-blue rounded-full flex justify-center items-center relative">
+        <div className="w-14 h-14 bg-gray-200 dark:bg-night-white rounded-full flex justify-center items-center relative">
           <IoIosNotificationsOutline className="text-3xl " />
           <div className="badge h-3 w-3 bg-orange-500 rounded-full absolute top-4 right-4 "></div>
         </div>

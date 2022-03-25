@@ -10,16 +10,18 @@ module.exports = {
         avatar: "url('/avatar.jpg')",
       },
       colors: {
-        'lay-white': '#F0F3F5',
-        'off-white': 'rgba(246, 248, 251, 1);',
-        'trans-white': 'rgba(226, 234, 255, 0.04);',
+        'blue-pulse': 'rgba(56, 108, 226, 0.6)',
         'custom-blue': 'rgba(56, 108, 226)',
         'dark-blue': 'rgba(1, 27, 87, 0.75)',
-        'night-blue': 'rgba(4, 18, 46, 1)',
+        'lay-black': '#010A1D',
+        'lay-white': '#F0F3F5',
         'night-black': 'rgba(6, 13, 28, 1)',
+        'night-blue': 'rgba(4, 18, 46, 1)',
+        'night-white': '#FFFFFF0F',
+        'off-white': 'rgba(246, 248, 251, 1);',
         'overlay-black': 'rgba(0, 0, 0, 0.301)',
         'overlay-dark': 'rgba(0, 0, 0, 0.7)',
-        'blue-pulse': 'rgba(56, 108, 226, 0.6)',
+        'trans-white': 'rgba(226, 234, 255, 0.04);',
       },
       keyframes: {
         slideIn: {
