@@ -6,7 +6,7 @@ const Card = ({ small, heading, joined, bg, icon }) => {
     <div
       className={`${style.card} pl-8 bg-white dark:bg-night-blue rounded-md text-gray-400 flex items-center relative shadow-sm`}
     >
-      <div className="z-50">
+      <div className="z-20">
         <p className="uppercase">{small ?? 'registered customers'}</p>
         <h2 className="font-bold text-3xl my-3 text-gray-700 dark:text-white uppercase">
           {heading ?? '380.2k'}
