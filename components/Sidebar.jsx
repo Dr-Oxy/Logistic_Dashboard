@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 //import icons
 import { GoHome, GoPerson, GoCreditCard } from 'react-icons/go';
@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`sidebar bg-white dark:bg-night-blue  w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-50 ${
+      className={`sidebar bg-white dark:bg-night-blue  w-72 h-full fixed top-0 left-0 pt-10 overflow-y-auto flex flex-col z-40 ${
         isShown
           ? 'animate-slideIn xl:animate-none'
           : 'animate-slideOut xl:animate-none -left-96 xl:left-0'

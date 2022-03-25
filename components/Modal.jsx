@@ -13,7 +13,7 @@ const Modal = () => {
   const { handleClose, currentItem, isFound } = useContext(DataContext);
 
   return (
-    <div className="bg-overlay-black dark:bg-overlay-dark h-full w-full px-4 lg:px-6 xl:px-0 overflow-auto fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  z-30 lg:flex justify-center items-center">
+    <div className="bg-overlay-black dark:bg-overlay-dark h-full w-full px-4 lg:px-6 xl:px-0 overflow-auto fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  z-50 lg:flex justify-center items-center">
       <div className=" bg-white dark:bg-night-blue h-auto mx-auto lg:mx-0 my-10 lg:my-0  w-full xl:w-2/3 py-8 rounded-md px-6 lg:px-8  relative">
         {/* modal header */}
         <div className="text-center mb-6 text-black dark:text-white">

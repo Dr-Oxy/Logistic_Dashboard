@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 import Head from 'next/head';
 
@@ -13,6 +13,17 @@ import Modal from './Modal';
 
 export const Layout = ({ children }) => {
   const { isOpen } = useContext(DataContext);
+
+  //overflow is hidden when modal is opened.
+  useEffect(() => {
+    const body = document.querySelector('body');
+
+    if (isOpen === true) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'auto';
+    }
+  }, [isOpen]);
 
   return (
     <div className="layout__container relative">
