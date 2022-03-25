@@ -1,23 +1,18 @@
-import Head from 'next/head';
-
 import { useContext } from 'react';
+
+import Head from 'next/head';
 
 //import utility
 import { DataContext } from '../Utils/DataContext';
-
-import { useTheme } from 'next-themes';
 
 //import components
 import Theme from './Theme';
 import Sidebar from '../components/Sidebar';
 import TopNav from './TopNav';
-
 import Modal from './Modal';
 
 export const Layout = ({ children }) => {
   const { isOpen } = useContext(DataContext);
-
-  const { setTheme, theme } = useTheme();
 
   return (
     <div className="layout__container relative">
@@ -33,9 +28,10 @@ export const Layout = ({ children }) => {
         <TopNav />
 
         {children}
-
-        <Theme theme={theme} setTheme={setTheme} />
       </main>
+
+      <Theme />
+
       {isOpen ? <Modal /> : ''}
     </div>
   );
