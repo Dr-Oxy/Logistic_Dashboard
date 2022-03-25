@@ -25,7 +25,7 @@ export const DataContextProvider = (props) => {
 
     setTimeout(() => {
       setIsFound(true);
-    }, 8000);
+    }, 5000);
   };
 
   const handleClose = () => {
