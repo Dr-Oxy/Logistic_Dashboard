@@ -29,7 +29,11 @@
 }
 
 .semi {
-  border-radius: 60px 0 10px 0;
+  border-radius: 150px 0 10px 0;
+}
+
+.semi:hover {
+  border-radius: unset;
 }
 
 .theme__active {

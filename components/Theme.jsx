@@ -8,8 +8,6 @@ import { BsMoonStarsFill } from 'react-icons/bs';
 const Theme = () => {
   const { theme, setTheme, systemTheme } = useTheme();
 
-  // const [themeClass, setThemeClass] = useState('');
-
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -17,19 +15,22 @@ const Theme = () => {
   }, []);
 
   useEffect(() => {
-    //checking system theme
-    const themeChanger = () => {
-      if (!mounted) return null;
-
-      const currentTheme = theme === 'system' ? systemTheme : theme;
-
-      if (currentTheme === 'light') {
-        lightTheme();
-      } else {
-        darkTheme();
-      }
-    };
+    themeChanger();
   }, []);
+
+  //checking system theme
+
+  const themeChanger = () => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+
+    if (currentTheme === 'light') {
+      lightTheme();
+    } else {
+      darkTheme();
+    }
+  };
 
   const lightTheme = () => {
     setTheme('light');

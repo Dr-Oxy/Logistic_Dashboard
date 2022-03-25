@@ -14,13 +14,13 @@ const Card = ({ small, heading, joined, bg, icon, hover }) => {
         <p className="capitalize">{joined ?? '3467 joined today'}</p>
       </div>
 
-      <div
-        className={`${style.semi} ${bg} h-16 w-16  absolute bottom-0 right-0 text-2xl text-white`}
-      >
-        <div className="flex items-center justify-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 ">
-          {icon}
-        </div>
+      <div className="flex text-3xl text-white items-center justify-center z-10  absolute bottom-5 right-5">
+        {icon}
       </div>
+
+      <div
+        className={`${style.semi} ${bg} hover:h-full hover:w-full h-20 w-20 absolute bottom-0 right-0`}
+      ></div>
     </div>
   );
 };
