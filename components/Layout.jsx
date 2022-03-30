@@ -12,7 +12,7 @@ import TopNav from './TopNav';
 import Modal from './Modal';
 
 export const Layout = ({ children }) => {
-  const { isOpen } = useContext(DataContext);
+  const { isOpen, isShown, handleSideClose } = useContext(DataContext);
 
   //overflow is hidden when modal is opened.
   useEffect(() => {
@@ -39,6 +39,12 @@ export const Layout = ({ children }) => {
         <TopNav />
 
         {children}
+        {isShown ? (
+          <div
+            onClick={handleSideClose}
+            className="lg:hidden bg-night-black/80 h-full w-full absolute top-0 left-0 z-40"
+          ></div>
+        ) : null}
       </main>
 
       <Theme />

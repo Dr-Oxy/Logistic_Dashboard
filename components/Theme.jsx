@@ -41,7 +41,7 @@ const Theme = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-night-blue flex flex-col items-center w-fit px-2 py-4 shadow-md rounded-lg fixed top-2/3 right-0 text-lg z-50">
+    <div className="bg-white dark:bg-night-blue flex flex-col items-center w-fit px-2 py-4 shadow-md rounded-lg fixed top-2/3 right-0 text-lg z-30">
       <button
         className="p-2 rounded-lg text-yellow-400 dark:bg-white/[0.2]"
         onClick={darkTheme}
