@@ -39,10 +39,11 @@ export const Layout = ({ children }) => {
         <TopNav />
 
         {children}
+
         {isShown ? (
           <div
             onClick={handleSideClose}
-            className="lg:hidden bg-night-black/80 h-full w-full absolute top-0 left-0 z-40"
+            className="lg:hidden bg-white/60 dark:bg-night-black/80 h-full w-full absolute top-0 left-0 z-40"
           ></div>
         ) : null}
       </main>
