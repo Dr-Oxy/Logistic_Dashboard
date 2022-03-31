@@ -4,7 +4,7 @@ import style from '../styles/Home.module.css';
 const Card = ({ small, heading, joined, bg, icon }) => {
   return (
     <div
-      className={`${style.card} pl-8 bg-white dark:bg-night-blue rounded-md text-gray-400 flex items-center relative shadow-sm`}
+      className={`${style.card} animate-slideIn xl:animate-slideLeft pl-8 bg-white dark:bg-night-blue rounded-md text-gray-400 flex items-center relative shadow-sm`}
     >
       <div className="z-20">
         <p className="uppercase">{small ?? 'registered customers'}</p>

@@ -15,7 +15,7 @@ const TableRow = ({ item }) => {
 
   return (
     <tr
-      className={`${styles.table__row} bg-white dark:bg-night-blue text-black dark:text-white`}
+      className={`${styles.table__row} animate-fadeIn bg-white dark:bg-night-blue text-black dark:text-white`}
     >
       <td>
         <div className="flex  items-start ">

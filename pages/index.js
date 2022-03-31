@@ -109,7 +109,7 @@ export default function Home() {
         </div>
 
         {/* Tab contents */}
-        <div>
+        <div className="animate-slideUp">
           {/* Chart */}
           <div
             className={

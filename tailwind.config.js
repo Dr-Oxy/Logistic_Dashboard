@@ -24,12 +24,30 @@ module.exports = {
         'trans-white': 'rgba(226, 234, 255, 0.04);',
       },
       keyframes: {
+        fadeIn: {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
         slideIn: {
           '0%': {
             transform: 'translateX(-200px)',
           },
           '100%': {
             transform: 'translateX(0)',
+          },
+        },
+        slideLeft: {
+          '0%': {
+            transform: 'translateX(200px)',
+            opacity: 0,
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: 1,
           },
         },
         slideOut: {
@@ -44,6 +62,16 @@ module.exports = {
           '100%': {
             left: '-380px',
             opacity: '0',
+          },
+        },
+        slideUp: {
+          '0%': {
+            transform: 'translateY(250px)',
+            opacity: 0.5,
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            opacity: 1,
           },
         },
         beat: {
@@ -63,8 +91,11 @@ module.exports = {
         },
       },
       animation: {
+        fadeIn: 'fadeIn 3s',
         slideIn: 'slideIn 1s',
+        slideLeft: 'slideLeft 1s',
         slideOut: 'slideOut 1s',
+        slideUp: 'slideUp 2s',
         beat: 'beat 2s infinite',
       },
     },
